@@ -1,7 +1,121 @@
-<mvc:View controllerName="eag4u.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
+<mvc:View
+    controllerName="eag4u.controller.View1"
+    displayBlock="true"
+    height="100%"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:layout="sap.ui.layout">
+    <Page>
+        <customHeader>
+            <Toolbar>
+                <Button 
+                    icon="sap-icon://nav-back" 
+                    press="goStart"
+                    type="Transparent" />
+                <Title 
+                    class="sapUiSmallMarginBegin"
+                    text = "{i18n>View1}" />
+                <ToolbarSpacer/>
+                
+                <Button 
+                    text="Neu" 
+                    press="onPressNeu" />  
+                <ToolbarSpacer/>
+
+                <Button 
+                    text="xxx" 
+                    press="startEinzug" /> 
+                <Button 
+                    text="RESTtest" 
+                    press="RESTtest" /> 
+                <Button 
+                    text="AJAX_Test" 
+                    press="AJAX_Test" /> 
+
+                                   
+            </Toolbar>
+        </customHeader>
+
+        <content>
+            <VBox
+                class="sapUiSmallMargin">
+                <Table 
+                    id="idView1Table"
+                    inset="false"
+                    mode="SingleSelectMaster"
+					selectionChange="onItemSelected"
+                    items="{oDaten>/read_RAP}"
+                    >
+                    <headerToolbar>
+                        <OverflowToolbar>
+                            <content>
+                                <Title 
+                                    text="{i18n>tableTitle_ZFK_C_PERSON}" 
+                                    level="H2"/>
+                                <ToolbarSpacer />
+                                <Button 
+                                    text="{i18n>Test Action}" 
+                                    press="testAction_RAP"
+                                    />
+                            </content>
+                        </OverflowToolbar>
+                    </headerToolbar>
+
+                    <columns>
+                        <Column
+                            width="50px">
+                            <Text 
+                                text="{i18n>ID}" />
+                        </Column>
+                        <Column
+                            width="350px">
+                            <Text 
+                                text="{i18n>col_vorname}" />
+                        </Column>
+                        <Column
+                            minScreenWidth="Desktop"
+                            demandPopin="true">
+                            <Text 
+                                text="{i18n>col_nachname}" />
+                        </Column>
+
+                    </columns>
+                    <items>
+                        <ColumnListItem>
+                            <cells>                 
+                                <Text
+                                    text="{oDaten>Id}" />
+                                <Text
+                                    text="{oDaten>Vorname}" />
+                                <Text
+                                    text="{oDaten>Nachname}" />                                
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+
+            </VBox>
+                    
+        </content>
+
+        <footer>
+            <OverflowToolbar>
+            <!--
+                <Button 
+                    text="{i18n>Listen}" 
+                    press="goListen"
+                    type="Reject" />
+                <ToolbarSpacer/>
+                <Button 
+                    text="{i18n>weiter}" 
+                    press="goBearbeitung"
+                    type="Accept" />
+                -->
+            </OverflowToolbar>
+        </footer>
     </Page>
 </mvc:View>
+

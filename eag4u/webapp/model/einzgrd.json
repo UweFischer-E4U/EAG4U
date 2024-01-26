@@ -1,0 +1,82 @@
+[
+    {
+        "BEINZGRUND": "01",
+        "BEINZGRD_TXT": "Lieferbeginn",
+        "FLAG_NO_BALANCE": "",
+        "FLAG_NO_BBP": "",
+        "FLAG_NO_WL": "",
+        "FLAG_NO_NAV": ""
+    },
+    {
+        "BEINZGRUND": "02",
+        "BEINZGRD_TXT": "Einzug/Neuanlage",
+        "FLAG_NO_BALANCE": "",
+        "FLAG_NO_BBP": "",
+        "FLAG_NO_WL": "",
+        "FLAG_NO_NAV": ""
+    },
+    {
+        "BEINZGRUND": "03",
+        "BEINZGRD_TXT": "Lieferantenwechsel",
+        "FLAG_NO_BALANCE": "",
+        "FLAG_NO_BBP": "",
+        "FLAG_NO_WL": "",
+        "FLAG_NO_NAV": "X"
+    },
+    {
+        "BEINZGRUND": "04",
+        "BEINZGRD_TXT": "EoG Endkunde",
+        "FLAG_NO_BALANCE": "",
+        "FLAG_NO_BBP": "",
+        "FLAG_NO_WL": "",
+        "FLAG_NO_NAV": "X"
+    },
+    {
+        "BEINZGRUND": "05",
+        "BEINZGRD_TXT": "EoG Dummy-Kunde",
+        "FLAG_NO_BALANCE": "",
+        "FLAG_NO_BBP": "X",
+        "FLAG_NO_WL": "X",
+        "FLAG_NO_NAV": "X"
+    },
+    {
+        "BEINZGRUND": "06",
+        "BEINZGRD_TXT": "EoG Anschlussnehmer/EigentÃ¼mer",
+        "FLAG_NO_BALANCE": "",
+        "FLAG_NO_BBP": "X",
+        "FLAG_NO_WL": "X",
+        "FLAG_NO_NAV": ""
+    },
+    {
+        "BEINZGRUND": "07",
+        "BEINZGRD_TXT": "EoG Hausverwaltung",
+        "FLAG_NO_BALANCE": "",
+        "FLAG_NO_BBP": "X",
+        "FLAG_NO_WL": "X",
+        "FLAG_NO_NAV": ""
+    },
+    {
+        "BEINZGRUND": "08",
+        "BEINZGRD_TXT": "Zwischenverbrauch (nicht bilanzierungsrelevant)",
+        "FLAG_NO_BALANCE": "X",
+        "FLAG_NO_BBP": "",
+        "FLAG_NO_WL": "",
+        "FLAG_NO_NAV": ""
+    },
+    {
+        "BEINZGRUND": "09",
+        "BEINZGRD_TXT": "EoG Neuanlage mit Endkunde",
+        "FLAG_NO_BALANCE": "",
+        "FLAG_NO_BBP": "",
+        "FLAG_NO_WL": "",
+        "FLAG_NO_NAV": ""
+    },
+    {
+        "BEINZGRUND": "99",
+        "BEINZGRD_TXT": "Altbestand Leeranlagen",
+        "FLAG_NO_BALANCE": "",
+        "FLAG_NO_BBP": "X",
+        "FLAG_NO_WL": "X",
+        "FLAG_NO_NAV": "X"
+    }
+]

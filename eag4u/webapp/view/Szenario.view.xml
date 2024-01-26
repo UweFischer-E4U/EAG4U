@@ -1,0 +1,104 @@
+<mvc:View
+    height="100%"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Table id="idSzenarioTable"
+        inset="false"
+        items="{oDaten>/szenario}">
+        <headerToolbar>
+            <OverflowToolbar>
+                <content>
+                </content>
+            </OverflowToolbar>
+        </headerToolbar>
+        <columns>
+            <Column
+                width="100px"
+                mergeDuplicates="true">
+                <Text 
+                    text="{i18n>szenario.col.von}" />
+            </Column>
+            <Column
+                width="100px"
+                mergeDuplicates="true">
+                <Text 
+                    text="{i18n>szenario.col.bis}" />
+            </Column>
+            <Column                
+                minScreenWidth="Tablet"
+                demandPopin="true">
+                <Text 
+                    text="{i18n>szenario.col.Scenario}" />
+            </Column>
+            <Column
+                width="100px"
+                minScreenWidth="Tablet"
+                demandPopin="true">
+                <Text 
+                    text="{i18n>szenario.col.Vertrag}" />
+            </Column>
+            <Column
+                width="65px"
+                minScreenWidth="Tablet"
+                demandPopin="true">
+                <Text 
+                    text="{i18n>szenario.col.abrechenbar}" />
+            </Column>
+            <Column
+                width="50px"
+                minScreenWidth="Tablet"
+                demandPopin="true">
+                <Text 
+                    text="{i18n>szenario.col.eigen}" />
+            </Column>
+            <Column
+                minScreenWidth="Tablet"
+                demandPopin="true">
+                <Text 
+                    text="{i18n>szenario.col.ServiceArt}" />
+            </Column>
+            <Column
+                width="50px"
+                minScreenWidth="Tablet"
+                demandPopin="true">
+                <Text 
+                    text="{i18n>szenario.col.nVS}" />
+            </Column>
+            <Column
+                minScreenWidth="Desktop"
+                demandPopin="true">
+                <Text 
+                    text="{i18n>szenario.col.Serviceanbieter}" />
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem vAlign="Middle">
+                <cells>
+                    <Text
+                        text="{oDaten>von}" />
+                    <Text
+                        text="{oDaten>bis}" />
+                    <ObjectIdentifier
+						title="{oDaten>Scenario}"
+						text="{oDaten>SzenarioBez}"/>
+                    <Text
+                        text="{oDaten>Vertrag}" />
+                    <Text
+                        text="{oDaten>abrechenbar}" />
+                    <Text
+                        text="{oDaten>eigen}" />
+                    <ObjectIdentifier
+						title="{oDaten>ServiceArt}"
+						text="{oDaten>ServiceBez}"/>
+                    <Text
+                        text="{oDaten>nVS}" />                    
+                    <ObjectIdentifier
+						title="{oDaten>Serviceanbieter}"
+						text="{oDaten>ServiceanbieterBez}"/>
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>                
+</mvc:View>

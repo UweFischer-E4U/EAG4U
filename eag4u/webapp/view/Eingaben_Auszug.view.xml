@@ -1,0 +1,58 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc">
+        
+    <VBox
+        class="sapUiSmallMargin sapUiSmallMarginBegin">
+        <Title 
+            class="sapUiTinyMarginBottom"
+            text="{i18n>moveOut}" />
+        
+        <HBox>
+            <Text
+                text="{i18n>moveOutDat}" 
+                width="150px"
+                class="sapUiTinyMarginTop" />
+            <DatePicker
+                id="DP_moveOutDat"
+                value="{
+                    'path':'oDaten>/eingaben/moveOutDat',
+                    'type':'sap.ui.model.type.Date',
+                    'formatOptions': {
+                        'pattern': 'dd.MM.yyyy'
+                    }
+                }"
+                class="sapUiSmallMarginBottom"/>
+        </HBox>
+
+        <HBox>
+            <Text
+                text="{i18n>auszgrd}" 
+                width="150px"
+                class="sapUiTinyMarginTop" />
+            <ComboBox
+				width="350px"
+                showSecondaryValues= "true"
+                filterSecondaryValues= "true"
+                value="{oDaten>/eingaben/auszgrd}"
+                placeholder="{i18n>select}"
+				items="{
+					path: 'oDaten>/auszgrd',
+					sorter: { path: 'BAUSZGRUND' }
+				}">
+				<core:ListItem 
+                    key="{oDaten>BAUSZGRUND}" 
+                    text="{oDaten>BAUSZGRD_TXT}" 
+                    additionalText = "{oDaten>BAUSZGRUND}"/>
+			</ComboBox>
+        </HBox>
+
+        <Button 
+            id="but_goXXX" 
+            text="{i18n>go}" 
+            press="XXX"
+            type="Accept" />
+
+    </VBox>               
+</mvc:View>

@@ -39,7 +39,7 @@ sap.ui.define([
 							"tiles": [{
 								"tileType": "sap.ushell.ui.tile.StaticTile",
 								"properties": {
-									"title": "Ein-/Auszugsgenerator",
+									"title": "ZFK Test",
 									"targetURL": "#eag4u-display"
 								}
 							}]
@@ -54,15 +54,15 @@ sap.ui.define([
 							"eag4u-display": {
 								"semanticObject": "eag4u",
 								"action": "display",
-								"description": "Ein-/Auszugsgenerator",
-								"title": "Ein-/Auszugsgenerator",
+								"description": "A Fiori application.",
+								"title": "ZFK Test",
 								"signature": {
 									"parameters": {}
 								},
 								"resolutionResult": {
 									"applicationType": "SAPUI5",
 									"additionalInformation": "SAPUI5.Component=eag4u",
-									"url": sap.ui.require.toUrl("eag4u")
+									"url": sap.ui.require.toUrl("eag4u/eag4u")
 								}
 							}
 						}

@@ -1,0 +1,141 @@
+<mvc:View
+    height="100%"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc">
+    <List
+		headerText="{i18n>Scenario}"
+		headerLevel="H2"        
+        showSeparators="None"
+		items="{
+			path: 'oDaten>/szenarioPanel',
+            templateShareable: true
+		}" >
+		<CustomListItem>
+            <Panel 
+                width="auto"                 
+                expandable="true" 
+                expanded="false"
+                backgroundDesign="Translucent"
+                expand="expandScenarioPanel"
+                class="sapUiTinyMargin" 
+                accessibleRole="Region">
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <Text 
+                            text="Datum: {oDaten>von} - {oDaten>bis}" 
+                            class="sapUiMediumMarginEnd"/>
+                        <Text
+                            text="{oDaten>Scenario}" 
+                            class="sapUiSmallMarginEnd"/>
+						<Text
+                            text="{oDaten>SzenarioBez}" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <content>
+                    <Table 
+                        inset="false"
+                        alternateRowColors="true"  
+                        items="{
+                            path: 'oDaten>vertraege',
+                            templateShareable: true
+                        }" >
+                        <columns>
+                            <Column
+                                width="100px"
+                                minScreenWidth="Tablet"
+                                demandPopin="true">
+                                <Text 
+                                    text="{i18n>szenario.col.Vertrag}" />
+                            </Column>
+                            <Column
+                                width="80px"
+                                hAlign="Center"
+                                minScreenWidth="Tablet"
+                                demandPopin="true">
+                                <Text 
+                                    text="{i18n>szenario.col.abrechenbar}" />
+                            </Column>
+                            <Column
+                                width="80px"
+                                hAlign="Center"
+                                minScreenWidth="Tablet"
+                                demandPopin="true">
+                                <Text 
+                                    text="{i18n>szenario.col.eigen}" />
+                            </Column>
+                            <Column
+                                minScreenWidth="Tablet"
+                                demandPopin="true"
+                                width="100px">
+                                <Text 
+                                    text="{i18n>szenario.col.ServiceArt}" />
+                            </Column>
+                            <Column
+                                minScreenWidth="Tablet"
+                                demandPopin="true">
+                                <Text 
+                                    text="{i18n>szenario.col.ServiceBezeichnung}" />
+                            </Column>
+                            <Column
+                                width="80px"
+                                minScreenWidth="Tablet"
+                                demandPopin="true">
+                                <Text 
+                                    text="{i18n>szenario.col.nVS}" />
+                            </Column>
+                            <Column
+                                width="120px"
+                                minScreenWidth="Desktop"
+                                demandPopin="true">
+                                <Text 
+                                    text="{i18n>szenario.col.Serviceanbieter}" />
+                            </Column>
+                        <Column
+                                minScreenWidth="Desktop"
+                                demandPopin="true">
+                                <Text 
+                                    text="{i18n>szenario.col.ServiceanbieterBezeichnung}" />
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem vAlign="Middle">
+                                <cells>
+                                    <Text
+                                        text="{oDaten>Vertrag}" />
+                                    <core:Icon
+                                        src="{
+                                                path: 'oDaten>abrechenbar',
+                                                formatter: 'eag4u.util.Formatter.hakenIcon'
+                                            }"
+                                        color="green"
+                                        size="20px" >
+                                    </core:Icon>
+                                    <core:Icon
+                                        src="{
+                                                path: 'oDaten>eigen',
+                                                formatter: 'eag4u.util.Formatter.hakenIcon'
+                                            }"
+                                        color="green"
+                                        size="20px" >
+                                    </core:Icon>
+                                    <Text
+                                        text="{oDaten>ServiceArt}" />
+                                    <Text
+                                        text="{oDaten>ServiceBez}"/>
+                                    <Text
+                                        text="{oDaten>nVS}" />
+                                    <Text
+                                        text="{oDaten>Serviceanbieter}" />                  
+                                    <Text
+                                        text="{oDaten>ServiceanbieterBez}"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table> 
+                </content>
+            </Panel>
+        </CustomListItem>
+	</List>               
+</mvc:View>

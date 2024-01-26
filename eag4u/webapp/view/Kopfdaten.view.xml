@@ -1,0 +1,70 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc">
+    <VBox
+        width="500px"
+        class="sapUiSmallMargin">
+        <HBox>
+            <Text
+                text="{i18n>marktlocID}" 
+                width="150px" />
+            <Title
+                text="{oDaten>/kopfdaten/MarktlocID}"/>
+        </HBox>
+
+        <HBox>
+            <Text
+                text="{i18n>Scenario}" 
+                width="150px" />
+            <Title
+                text="{oDaten>/kopfdaten/Scenario} - {oDaten>/kopfdaten/SzenarioBez}"/>
+        </HBox>
+
+        <HBox
+            class="sapUiSmallMarginTop">
+            <Text
+                text="{i18n>netz}" 
+                width="150px" />
+            <Text
+                text="{oDaten>/kopfdaten/Netz}" />
+        </HBox>
+        <HBox>
+            <Text
+                text="{i18n>netzebene}" 
+                width="150px" />
+            <Text
+                text="{oDaten>/kopfdaten/Netzebene}" />
+        </HBox>
+        <HBox>
+            <Text
+                text="{i18n>netzbetreiber}" 
+                width="150px" />
+            <Text
+                text="{oDaten>/kopfdaten/Netzbetreiber}" />
+        </HBox>
+
+        <HBox
+            class="sapUiSmallMarginTop">
+            <Text
+                text="{i18n>gueltigAb}" 
+                width="150px" />
+            <Text
+                text="{oDaten>/kopfdaten/gueltigAb}"
+                class="sapUiSmallMarginEnd" />
+            <Text
+                text="({oDaten>/kopfdaten/gueltigAbZeit})" />
+        </HBox>
+        <HBox>
+            <Text
+                text="{i18n>gueltigbis}" 
+                width="150px" />
+            <Text
+                text="{oDaten>/kopfdaten/gueltigbis}"
+                class="sapUiSmallMarginEnd" />
+            <Text
+                text="({oDaten>/kopfdaten/gueltigbisZeit})" />
+        </HBox>
+    </VBox>
+             
+</mvc:View>

@@ -1,0 +1,132 @@
+<mvc:View
+    controllerName="eag4u.controller.Startseite"
+    height="100%"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:layout="sap.ui.layout">
+    <Page>
+        <customHeader>
+            <Toolbar>
+                <Title 
+                    class="sapUiSmallMarginBegin"
+                    text = "{i18n>Startseite}" />
+                <ToolbarSpacer/>
+            </Toolbar>
+        </customHeader>
+
+        <content>
+            <HBox
+                class="sapUiSmallMargin">
+                <Title 
+                    class="sapUiTinyMarginTop"
+                    width="200px"
+                    text="{i18n>ProzessTitle}" />
+                <RadioButtonGroup 
+                    id="rbg_prozess"
+                    selectedIndex="{oDaten>/eingaben/aufgabe}">
+                    <RadioButton 
+                        id="rbg_prozess1" 
+                        text="{i18n>moveIn}" />
+                    <RadioButton 
+                        id="rbg_prozess2" 
+                        text="{i18n>moveOut}" />
+                </RadioButtonGroup>
+            </HBox>
+
+            <HBox
+                class="sapUiSmallMargin">
+                <Title 
+                    class="sapUiTinyMarginTop"
+                    width="200px"
+                    text="{i18n>ParaTitle}" />
+                <VBox>
+                    <CheckBox 
+                        id="cb_einspeiser"
+                        text="{i18n>einspeiser}" 
+                        selected="{oDaten>/eingaben/einspeiser}" />
+                    <CheckBox 
+                        id="cb_storno"
+                        text="{i18n>storno}" 
+                        selected="{oDaten>/eingaben/storno}" />
+                    <CheckBox 
+                        id="cb_formelSend"
+                        visible="{
+                            parts: [
+                                {path: 'oDaten>/eingaben/aufgabe' },
+                                {path: 'oDaten>/eingaben/storno' }
+                                ],
+					        formatter: 'eag4u.util.Formatter.visible' }"
+                        text="{i18n>formelSend}"
+                        selected="{oDaten>/eingaben/formelSend}" />
+                </VBox>
+            </HBox>
+            <!--
+                visible="{=${oDaten>/eingaben/aufgabe} === 1? false : true}"
+            -->
+            <HBox
+                class="sapUiSmallMargin">
+                <Title 
+                    class="sapUiTinyMarginTop"
+                    width="200px"
+                    text="{i18n>SelectionTitle}" />
+                <VBox>
+                    <HBox>
+                        <Text
+                            text="{i18n>zaehlpunkt}" 
+                            width="150px"
+                            class="sapUiSmallMarginTop" />
+                        <Input
+                            id="inputValueHelp_Zaehlpunkt"
+                            class="sapUiSmallMarginBottom"
+                            value="{oDaten>/eingaben/zaehlpunkt}"
+                            placeholder="{i18n>select}"
+                            showValueHelp="true"
+                            valueHelpIconSrc="sap-icon://arrow-left"
+                            valueHelpRequest="handleValueHelp_Zaehlpunkt"/>
+                    </HBox>
+                    <HBox
+                        visible="{=${oDaten>/eingaben/aufgabe} === 1? false : true}">
+                        <Text
+                            text="{i18n>gp}" 
+                            width="150px"
+                            class="sapUiSmallMarginTop" />
+                        <Input
+                            id="inputValueHelp_GP"
+                            class="sapUiSmallMarginBottom"
+                            value="{oDaten>/eingaben/gp}"
+                            placeholder="{i18n>select}"
+                            showValueHelp="true"
+                            valueHelpIconSrc="sap-icon://arrow-left"
+                            valueHelpRequest="handleValueHelp_GP"/>
+                    </HBox>
+                </VBox>
+            </HBox>
+                    
+        </content>
+
+        <footer>
+            <OverflowToolbar>
+                <Button
+                    id="but_goListen" 
+                    text="{i18n>Listen}" 
+                    press="goListen"
+                    type="Reject" />
+                <Button
+                    id="but_goView1" 
+                    text="{i18n>View1}" 
+                    press="goView1"
+                    type="Reject" />
+                <ToolbarSpacer/>
+                <Button 
+                    id="but_goBearbeitung" 
+                    text="{i18n>weiter}" 
+                    press="goBearbeitung"
+                    type="Accept" />
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>
+

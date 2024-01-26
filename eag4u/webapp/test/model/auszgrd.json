@@ -1,0 +1,22 @@
+[
+    {
+        "BAUSZGRUND": "01",
+        "BAUSZGRD_TXT": "Lieferende mit Stilllegung"
+    },
+    {
+        "BAUSZGRUND": "02",
+        "BAUSZGRD_TXT": "Lieferende ohne Stilllegung"
+    },
+    {
+        "BAUSZGRUND": "03",
+        "BAUSZGRD_TXT": "Lieferantenwechsel"
+    },
+    {
+        "BAUSZGRUND": "04",
+        "BAUSZGRD_TXT": "Lieferende aus EoG"
+    },
+    {
+        "BAUSZGRUND": "05",
+        "BAUSZGRD_TXT": "Lieferende aus Wegfall Lieferant(Insolvenz)"
+    }
+]

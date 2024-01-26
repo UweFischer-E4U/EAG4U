@@ -1,0 +1,87 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Title 
+            class="sapUiTinyMarginBottom sapUiSmallMargin sapUiSmallMarginBegin"
+            text="{i18n>moveIn}" /> 
+    <HBox>
+        <VBox>       
+            <HBox>
+                <Text
+                    text="{i18n>moveInDat}" 
+                    width="120px"
+                    class="sapUiTinyMarginTop" />
+                <DatePicker
+                    id="DP_moveInDat"
+                    value="{
+                        'path':'oDaten>/eingaben/moveInDat',
+                        'type':'sap.ui.model.type.Date',
+                        'formatOptions': {
+                            'pattern': 'dd.MM.yyyy'
+                        }
+                    }"
+                    />
+            </HBox>
+            <HBox
+                class="sapUiSmallMarginBottom">
+                <Text
+                    text="{i18n>moveOutDat}" 
+                    width="120px"
+                    class="sapUiTinyMarginTop" />
+                <DatePicker
+                    id="DP_moveOutDat"
+                    value="{
+                        'path':'oDaten>/eingaben/moveOutDat',
+                        'type':'sap.ui.model.type.Date',
+                        'formatOptions': {
+                            'pattern': 'dd.MM.yyyy'
+                        }
+                    }"
+                    />
+            </HBox>
+            <HBox>
+                <Text
+                    text="{i18n>gp}" 
+                    width="120px"
+                    class="sapUiTinyMarginTop" />
+                <Input
+                    value="{oDaten>/eingaben/gp}"
+                    placeholder="{i18n>select}"/>
+            </HBox>
+        </VBox> 
+
+        <VBox
+            class="sapUiSmallMargin sapUiSmallMarginBegin">
+            <HBox>
+                <Text
+                    text="{i18n>einzgrd}" 
+                    width="100px"
+                    class="sapUiTinyMarginTop" />
+                <ComboBox
+                    width="350px"
+                    showSecondaryValues= "true"
+                    filterSecondaryValues= "true"
+                    value="{oDaten>/eingaben/einzgrd}"
+                    placeholder="{i18n>select}"
+                    items="{
+                        path: 'oDaten>/einzgrd',
+                        sorter: { path: 'BEINZGRUND' }
+                    }">
+                    <core:ListItem 
+                        key="{oDaten>BEINZGRUND}" 
+                        text="{oDaten>BEINZGRD_TXT}" 
+                        additionalText = "{oDaten>BEINZGRUND}"/>
+                </ComboBox>
+            </HBox>
+        </VBox> 
+    </HBox>
+
+    <Bar>
+        <contentRight>
+            <Button text="Accept" type="Accept" />
+            <Button text="Reject" type="Reject" />
+        </contentRight>
+    </Bar>  
+        
+</mvc:View>

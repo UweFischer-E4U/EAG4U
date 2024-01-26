@@ -34,10 +34,6 @@ sap.ui.define([
                 this.oDaten = new sap.ui.model.json.JSONModel();
                 this.setModel(this.oDaten, "oDaten");
                 this.oDaten.setSizeLimit(1000);
-                // Sammler für die Benutzereingaben
-                this.oEingaben = new sap.ui.model.json.JSONModel();
-                this.setModel(this.oEingaben, "oEingaben");
-                this.oEingaben.setSizeLimit(1000);
             },
             
             getContentDensityClass() {

@@ -1,0 +1,46 @@
+<mvc:View
+    controllerName="eag4u.controller.Bearbeitung"
+    height="100%"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Page>
+        <customHeader>
+            <Toolbar>
+                <Button 
+                    icon="sap-icon://nav-back" 
+                    press="goStart"
+                    type="Transparent" />
+                <Title 
+                    class="sapUiSmallMarginBegin"
+                    text = "{i18n>Bearbeitung}" />
+                <ToolbarSpacer/>
+            </Toolbar>
+        </customHeader>
+
+        <content>
+            <VBox
+                class="sapUiSmallMarginBeginEnd">
+                <HBox
+                    class="sapUiSmallMargin">
+                    <mvc:XMLView 
+                        viewName="eag4u.view.Kopfdaten"/>
+                    <mvc:XMLView 
+                        viewName="eag4u.view.Eingaben_Einzug"
+                        visible="{=${oDaten>/eingaben/aufgabe} === 0? true : false}"/>
+                    <mvc:XMLView 
+                        viewName="eag4u.view.Eingaben_Auszug"
+                        visible="{=${oDaten>/eingaben/aufgabe} === 1? true : false}"/>
+                </HBox>
+                
+                <mvc:XMLView 
+                    viewName="eag4u.view.SzenarioPanel"/>
+            </VBox>        
+        </content>
+
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

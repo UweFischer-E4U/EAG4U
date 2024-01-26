@@ -1,0 +1,12 @@
+{
+    "Netz": "000259",
+    "Netzebene": "",
+    "Netzbetreiber": "N0000259",
+    "gueltigAb": "01.01.1965",
+    "gueltigAbZeit": "00:00:00",
+    "gueltigbis": "31.12.9999",
+    "gueltigbisZeit": "23:59:59",
+    "MarktlocID": "50833463090",        
+    "Scenario": "110",
+    "SzenarioBez": "Netznutzung int. vMSB"
+}

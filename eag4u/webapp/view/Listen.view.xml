@@ -1,0 +1,173 @@
+<mvc:View
+    controllerName="eag4u.controller.Listen"
+    height="100%"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:layout="sap.ui.layout">
+    <Page>
+        <customHeader>
+            <Toolbar>
+                <Button 
+                    icon="sap-icon://nav-back" 
+                    press="goStart"
+                    type="Transparent" />
+                <Title 
+                    class="sapUiSmallMarginBegin"
+                    text = "{i18n>Listen}" />
+                <ToolbarSpacer/>
+            </Toolbar>
+        </customHeader>
+
+        <content>
+            <VBox
+                class="sapUiSmallMargin">
+                <Table 
+                    id="idEinzgrdTable"
+                    inset="false"
+                    items="{oDaten>/einzgrd}"
+                    >
+                    <headerToolbar>
+                        <OverflowToolbar>
+                            <content>
+                                <Title 
+                                    text="{i18n>einzgrd}" 
+                                    level="H2"/>
+                                <ToolbarSpacer />
+                            </content>
+                        </OverflowToolbar>
+                    </headerToolbar>
+
+                    <columns>
+                        <Column
+                            width="50px">
+                            <Text 
+                                text="{i18n>ID}" />
+                        </Column>
+                        <Column
+                            width="350px">
+                            <Text 
+                                text="{i18n>col_text}" />
+                        </Column>
+                        <Column
+                            minScreenWidth="Desktop"
+                            demandPopin="true">
+                            <Text 
+                                text="{i18n>col_nichtBilanz}" />
+                        </Column>
+                        <Column
+                            minScreenWidth="Desktop"
+                            demandPopin="true">
+                            <Text 
+                                text="{i18n>col_keinAbschlagsplan}" />
+                        </Column>
+                        <Column
+                            minScreenWidth="Desktop"
+                            demandPopin="true">
+                            <Text 
+                                text="{i18n>col_keinVertrag}" />
+                        </Column>
+                        <Column
+                            minScreenWidth="Desktop"
+                            demandPopin="true">
+                            <Text 
+                                text="{i18n>col_keinNVA}" />
+                        </Column>
+
+                    </columns>
+                    <items>
+                        <ColumnListItem>
+                            <cells>                 
+                                <Text
+                                    text="{oDaten>BEINZGRUND}" />
+                                <Text
+                                    text="{oDaten>BEINZGRD_TXT}" />
+                                <core:Icon
+                                    src="{
+                                            path: 'oDaten>FLAG_NO_BALANCE',
+                                            formatter: 'eag4u.util.Formatter.hakenIcon'
+                                        }"
+                                    color="green"
+                                    size="20px" >
+                                </core:Icon>
+                                <core:Icon
+                                    src="{
+                                            path: 'oDaten>FLAG_NO_BBP',
+                                            formatter: 'eag4u.util.Formatter.hakenIcon'
+                                        }"
+                                    color="green"
+                                    size="20px" >
+                                </core:Icon>
+                                <core:Icon
+                                    src="{
+                                            path: 'oDaten>FLAG_NO_WL',
+                                            formatter: 'eag4u.util.Formatter.hakenIcon'
+                                        }"
+                                    color="green"
+                                    size="20px" >
+                                </core:Icon>
+                                <core:Icon
+                                    src="{
+                                            path: 'oDaten>FLAG_NO_NAV',
+                                            formatter: 'eag4u.util.Formatter.hakenIcon'
+                                        }"
+                                    color="green"
+                                    size="20px" >
+                                </core:Icon>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+
+                <Table 
+                    id="idAuszgrdTable"
+                    inset="false"
+                    items="{oDaten>/auszgrd}"
+                    >
+                    <headerToolbar>
+                        <OverflowToolbar>
+                            <content>
+                                <Title 
+                                    text="{i18n>auszgrd}" 
+                                    level="H2"/>
+                                <ToolbarSpacer />
+                            </content>
+                        </OverflowToolbar>
+                    </headerToolbar>
+
+                    <columns>
+                        <Column
+                            width="50px">
+                            <Text 
+                                text="{i18n>ID}" />
+                        </Column>
+                        <Column>
+                            <Text 
+                                text="{i18n>col_text}" />
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem>
+                            <cells>                 
+                                <Text
+                                    text="{oDaten>BAUSZGRUND}" />
+                                <Text
+                                    text="{oDaten>BAUSZGRD_TXT}" />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+
+            </VBox>
+                    
+        </content>
+
+        <footer>
+            <OverflowToolbar>
+
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

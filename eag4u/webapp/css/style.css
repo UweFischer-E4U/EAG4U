@@ -1,1 +1,8 @@
 /* Enter your custom styles here */
+div {
+    border: solid 0px red;
+}
+
+.sapMPanelHeaderTB{
+    background-color: rgb(226, 226, 226) !important;
+}
