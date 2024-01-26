@@ -1,0 +1,13 @@
+<mvc:View controllerName="resttest.controller.Startseite"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Text 
+            text="Das ist der erste Test"
+        />
+        <Button 
+            type="Reject" 
+            text="Reject" 
+            press="onPress" />
+    </Page>
+</mvc:View>

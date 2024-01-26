@@ -1,0 +1,8 @@
+<mvc:View controllerName="uwe1.controller.uwe1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Text
+            text="Hallo du" />
+    </Page>
+</mvc:View>

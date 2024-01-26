@@ -1,0 +1,32 @@
+{
+    "folders": [
+        {
+            "name": "fk_uxteam",
+            "path": "fk_uxteam"
+        },
+        {
+            "name": "fabianuxteam",
+            "path": "fabianuxteam"
+        }
+    ],
+    "settings": {},
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Launch via NPM",
+                "request": "launch",
+                "runtimeArgs": [
+                    "run-script",
+                    "debug"
+                ],
+                "runtimeExecutable": "npm",
+                "skipFiles": [
+                    "<node_internals>/**"
+                ],
+                "type": "node"
+            }
+
+        ]
+    }
+}

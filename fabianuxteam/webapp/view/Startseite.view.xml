@@ -1,0 +1,84 @@
+<mvc:View 
+    controllerName="e4u.uxt.fabianuxteam.controller.Startseite"
+    xmlns:mvc="sap.ui.core.mvc" 
+    displayBlock="true"    
+    xmlns="sap.m">
+    <Page 
+        id="page" 
+        title="{i18n>title}">
+		<VBox 
+			width="100%"
+			class="sapUiTinyMarginBeginEnd"
+		/>
+        <Table             
+			id="idUXTeam"
+			class="sapUiTinyMarginBeginEnd"
+		    inset="false"        
+            items="{
+                path: '/UXTeam',
+                sorter: {
+                    path: 'LastName'
+                }
+            }">
+		<headerToolbar>
+			<OverflowToolbar>
+				<content>
+					<Title 
+						text="UX Team" 
+						level="H2"/>
+					<ToolbarSpacer />
+				</content>
+			</OverflowToolbar>
+		</headerToolbar>
+		<columns>
+			<Column>
+				<Text text="Name" />
+			</Column>
+			<Column>
+				<Text text="Team" />
+			</Column>
+			<Column>
+				<Text text="Alter" />
+			</Column>
+			<Column>
+				<Text text="Rolle" />
+			</Column>
+			<Column>
+				<Text text="Verdienst" />
+			</Column>
+			<Column>
+				<Text text="Aktiv" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem vAlign="Middle">
+				<cells>
+					<Text
+						text="{FirstName} {LastName}" />
+					<Text
+						text="{Team}" />
+					<Text
+						text="{Age}" />
+					<Text
+						text="{Role}" />
+					<Text
+						text="{Salery}" />
+					<Text
+						text="{Active}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+
+
+	<footer>
+		<OverflowToolbar>
+			<content>
+				<Text text="UX Team" />
+				<ToolbarSpacer />
+			</content>
+		</OverflowToolbar>
+	</footer>
+
+    </Page>
+</mvc:View>
